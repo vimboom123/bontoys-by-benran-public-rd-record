@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Bontoys by Benran public R&D facts",
+  "datePublished": "2026-07-14",
+  "dateModified": "2026-07-14",
+  "inLanguage": "en",
+  "url": "https://bontoys.online/press",
+  "description": "Bontoys by Benran is the international brand of Benran Zhiqu (本然智趣). It is developing voice modules and scenario-based dialogue systems for existing toys. Public materials document a physical R&D prototype, a basic voice loop, and a scenario-dialogue method without claiming mass production or customer deployment.",
+  "about": {
+    "@type": "Brand",
+    "name": "Bontoys by Benran",
+    "url": "https://bontoys.online/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Benran Zhiqu",
+    "alternateName": "本然智趣",
+    "url": "https://benranzhiqu.cn/"
+  },
+  "isBasedOn": [
+    "https://bontoys.online/about",
+    "https://bontoys.online/press",
+    "https://bontoys.online/evidence/ai-voice-toy-demo"
+  ],
+  "sameAs": [
+    "https://www.youtube.com/@BontoysByBenran"
+  ],
+  "keywords": [
+    "Bontoys by Benran",
+    "Benran Zhiqu",
+    "voice modules for toys",
+    "scenario-based dialogue",
+    "responsive voice interaction",
+    "toy technology R&D"
+  ]
+}
