@@ -6,6 +6,12 @@ const expectedOfficialChannels = [
   "https://www.linkedin.com/company/bontoys-by-benran",
   "https://www.youtube.com/@BontoysByBenran",
 ];
+const expectedLatestSnapshots = [
+  "https://web.archive.org/web/20260714191345/https://bontoys.online/",
+  "https://web.archive.org/web/20260714191404/https://bontoys.online/about",
+  "https://web.archive.org/web/20260714191428/https://bontoys.online/press",
+  "https://web.archive.org/web/20260714191540/https://bontoys.online/evidence/ai-voice-toy-demo",
+];
 
 test("publishes the verified official channels in the README and machine-readable record", async () => {
   const [readme, recordSource] = await Promise.all([
@@ -35,4 +41,15 @@ test("separates Bontoys by Benran from legacy and similarly named toy brands", a
   assert.match(record.about.disambiguatingDescription, /Bontoys\/Bontempi/);
   assert.match(record.about.disambiguatingDescription, /Bon Ton Toys/);
   assert.match(record.about.disambiguatingDescription, /B\. toys/);
+});
+
+test("links the latest independent snapshots of all canonical public identity pages", async () => {
+  const readme = await readFile(new URL("../README.md", import.meta.url), "utf8");
+
+  for (const snapshotUrl of expectedLatestSnapshots) {
+    assert.match(
+      readme,
+      new RegExp(snapshotUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+    );
+  }
 });

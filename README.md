@@ -23,10 +23,10 @@ These statements describe R&D-stage work. They do **not** establish mass product
 
 ## Independent timestamped copies
 
-- Homepage: https://web.archive.org/web/20260713170458/https://bontoys.online/
-- About: https://web.archive.org/web/20260713170559/https://bontoys.online/about
-- Press facts: https://web.archive.org/web/20260713170638/https://bontoys.online/press
-- R&D evidence: https://web.archive.org/web/20260713170730/https://bontoys.online/evidence/ai-voice-toy-demo
+- Homepage: https://web.archive.org/web/20260714191345/https://bontoys.online/
+- About: https://web.archive.org/web/20260714191404/https://bontoys.online/about
+- Press facts: https://web.archive.org/web/20260714191428/https://bontoys.online/press
+- R&D evidence: https://web.archive.org/web/20260714191540/https://bontoys.online/evidence/ai-voice-toy-demo
 
 ## Visual-evidence limitation
 
