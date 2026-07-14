@@ -23,6 +23,7 @@ These statements describe R&D-stage work. They do **not** establish mass product
 - Official LinkedIn Page: https://www.linkedin.com/company/bontoys-by-benran
 - Official YouTube channel: https://www.youtube.com/@BontoysByBenran
 - Verified X profile: https://x.com/Bontoysbybenran
+- Public Crunchbase profile: https://www.crunchbase.com/organization/bontoys-by-benran
 
 ## Independent timestamped copies
 
