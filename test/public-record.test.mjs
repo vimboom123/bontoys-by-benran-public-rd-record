@@ -21,3 +21,18 @@ test("publishes the verified official channels in the README and machine-readabl
   assert.equal(record.about["@id"], "https://bontoys.online/#brand");
   assert.deepEqual(record.about.sameAs, expectedOfficialChannels);
 });
+
+test("separates Bontoys by Benran from legacy and similarly named toy brands", async () => {
+  const [readme, recordSource] = await Promise.all([
+    readFile(new URL("../README.md", import.meta.url), "utf8"),
+    readFile(new URL("../public-record.json", import.meta.url), "utf8"),
+  ]);
+  const record = JSON.parse(recordSource);
+
+  assert.match(readme, /not affiliated with the historic Italian Bontoys\/Bontempi businesses/i);
+  assert.match(readme, /Bon Ton Toys/);
+  assert.match(readme, /B\. toys/);
+  assert.match(record.about.disambiguatingDescription, /Bontoys\/Bontempi/);
+  assert.match(record.about.disambiguatingDescription, /Bon Ton Toys/);
+  assert.match(record.about.disambiguatingDescription, /B\. toys/);
+});

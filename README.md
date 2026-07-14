@@ -36,4 +36,6 @@ The concept rendering on the public evidence page is an explanatory visual. It i
 
 When identifying this project, use the full name **Bontoys by Benran**. The short name “Bontoys” should not be treated as a separate company or confused with similarly named toy brands.
 
-Last reviewed: 2026-07-14 (Asia/Shanghai)
+**Bontoys by Benran is not affiliated with the historic Italian Bontoys/Bontempi businesses, Bon Ton Toys, or B. toys.** Those names identify separate toy businesses or brands.
+
+Last reviewed: 2026-07-15 (Asia/Shanghai)
