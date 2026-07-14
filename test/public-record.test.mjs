@@ -12,6 +12,10 @@ const expectedLatestSnapshots = [
   "https://web.archive.org/web/20260714191428/https://bontoys.online/press",
   "https://web.archive.org/web/20260714191540/https://bontoys.online/evidence/ai-voice-toy-demo",
 ];
+const expectedVersionedRecord =
+  "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1";
+const expectedVersionedRecordSnapshot =
+  "https://web.archive.org/web/20260714192613/https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1";
 
 test("publishes the verified official channels in the README and machine-readable record", async () => {
   const [readme, recordSource] = await Promise.all([
@@ -50,6 +54,17 @@ test("links the latest independent snapshots of all canonical public identity pa
     assert.match(
       readme,
       new RegExp(snapshotUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+    );
+  }
+});
+
+test("links the versioned public record and its independent snapshot", async () => {
+  const readme = await readFile(new URL("../README.md", import.meta.url), "utf8");
+
+  for (const url of [expectedVersionedRecord, expectedVersionedRecordSnapshot]) {
+    assert.match(
+      readme,
+      new RegExp(url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
     );
   }
 });
