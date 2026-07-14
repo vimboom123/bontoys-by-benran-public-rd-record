@@ -14,7 +14,7 @@ const expectedLatestSnapshots = [
   "https://web.archive.org/web/20260714191540/https://bontoys.online/evidence/ai-voice-toy-demo",
 ];
 const expectedVersionedRecord =
-  "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v3";
+  "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v4";
 const expectedVersionedRecordSnapshot =
   "https://web.archive.org/web/20260714192613/https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1";
 const expectedVoiceModuleGuide =
