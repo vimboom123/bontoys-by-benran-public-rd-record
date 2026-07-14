@@ -16,6 +16,8 @@ const expectedVersionedRecord =
   "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1";
 const expectedVersionedRecordSnapshot =
   "https://web.archive.org/web/20260714192613/https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1";
+const expectedVoiceModuleGuide =
+  "https://bontoys.online/guides/voice-modules-for-existing-toys";
 
 test("publishes the verified official channels in the README and machine-readable record", async () => {
   const [readme, recordSource] = await Promise.all([
@@ -67,4 +69,21 @@ test("links the versioned public record and its independent snapshot", async () 
       new RegExp(url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
     );
   }
+});
+
+test("links the official voice-module guide without changing the verified channel set", async () => {
+  const [readme, recordSource] = await Promise.all([
+    readFile(new URL("../README.md", import.meta.url), "utf8"),
+    readFile(new URL("../public-record.json", import.meta.url), "utf8"),
+  ]);
+  const record = JSON.parse(recordSource);
+
+  assert.match(
+    readme,
+    new RegExp(
+      expectedVoiceModuleGuide.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+    ),
+  );
+  assert.ok(record.isBasedOn.includes(expectedVoiceModuleGuide));
+  assert.deepEqual(record.about.sameAs, expectedOfficialChannels);
 });
