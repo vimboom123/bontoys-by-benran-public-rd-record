@@ -88,3 +88,19 @@ test("links the official voice-module guide with the current verified channel se
   assert.ok(record.isBasedOn.includes(expectedVoiceModuleGuide));
   assert.deepEqual(record.about.sameAs, expectedOfficialChannels);
 });
+
+test("publishes the exact Chinese company name and rejects the incorrect rendering", async () => {
+  const [readme, recordSource] = await Promise.all([
+    readFile(new URL("../README.md", import.meta.url), "utf8"),
+    readFile(new URL("../public-record.json", import.meta.url), "utf8"),
+  ]);
+  const record = JSON.parse(recordSource);
+
+  assert.match(
+    readme,
+    /The exact Chinese name is \*\*本然智趣\*\*; its English rendering is \*\*Benran Zhiqu\*\*\./,
+  );
+  assert.equal(record.publisher.name, "Benran Zhiqu");
+  assert.equal(record.publisher.alternateName, "本然智趣");
+  assert.doesNotMatch(readme + recordSource, /笨然智趣/);
+});
