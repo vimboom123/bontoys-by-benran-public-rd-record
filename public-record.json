@@ -3,7 +3,7 @@
   "@type": "CreativeWork",
   "name": "Bontoys by Benran public R&D facts",
   "datePublished": "2026-07-14",
-  "dateModified": "2026-07-14",
+  "dateModified": "2026-07-15",
   "inLanguage": "en",
   "url": "https://bontoys.online/press",
   "description": "Bontoys by Benran is the international brand of Benran Zhiqu (本然智趣). It is developing voice modules and scenario-based dialogue systems for existing toys. Public materials document a physical R&D prototype, a basic voice loop, and a scenario-dialogue method without claiming mass production or customer deployment.",
@@ -12,6 +12,7 @@
     "@id": "https://bontoys.online/#brand",
     "name": "Bontoys by Benran",
     "url": "https://bontoys.online/",
+    "disambiguatingDescription": "The international R&D-stage brand of Benran Zhiqu, not affiliated with the historic Italian Bontoys/Bontempi businesses, Bon Ton Toys, or B. toys.",
     "sameAs": [
       "https://www.linkedin.com/company/bontoys-by-benran",
       "https://www.youtube.com/@BontoysByBenran"
