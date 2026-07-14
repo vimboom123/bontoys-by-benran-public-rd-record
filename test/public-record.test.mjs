@@ -6,6 +6,7 @@ const expectedOfficialChannels = [
   "https://www.linkedin.com/company/bontoys-by-benran",
   "https://www.youtube.com/@BontoysByBenran",
   "https://x.com/Bontoysbybenran",
+  "https://www.crunchbase.com/organization/bontoys-by-benran",
 ];
 const expectedLatestSnapshots = [
   "https://web.archive.org/web/20260714191345/https://bontoys.online/",
