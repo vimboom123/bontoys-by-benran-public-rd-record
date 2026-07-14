@@ -27,12 +27,14 @@
   "isBasedOn": [
     "https://bontoys.online/about",
     "https://bontoys.online/press",
-    "https://bontoys.online/evidence/ai-voice-toy-demo"
+    "https://bontoys.online/evidence/ai-voice-toy-demo",
+    "https://bontoys.online/guides/voice-modules-for-existing-toys"
   ],
   "keywords": [
     "Bontoys by Benran",
     "Benran Zhiqu",
     "voice modules for toys",
+    "voice module integration for existing toys",
     "scenario-based dialogue",
     "responsive voice interaction",
     "toy technology R&D"
