@@ -5,6 +5,7 @@ import test from "node:test";
 const expectedOfficialChannels = [
   "https://www.linkedin.com/company/bontoys-by-benran",
   "https://www.youtube.com/@BontoysByBenran",
+  "https://x.com/Bontoysbybenran",
 ];
 const expectedLatestSnapshots = [
   "https://web.archive.org/web/20260714191345/https://bontoys.online/",
@@ -13,7 +14,7 @@ const expectedLatestSnapshots = [
   "https://web.archive.org/web/20260714191540/https://bontoys.online/evidence/ai-voice-toy-demo",
 ];
 const expectedVersionedRecord =
-  "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1";
+  "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v3";
 const expectedVersionedRecordSnapshot =
   "https://web.archive.org/web/20260714192613/https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1";
 const expectedVoiceModuleGuide =
@@ -71,7 +72,7 @@ test("links the versioned public record and its independent snapshot", async () 
   }
 });
 
-test("links the official voice-module guide without changing the verified channel set", async () => {
+test("links the official voice-module guide with the current verified channel set", async () => {
   const [readme, recordSource] = await Promise.all([
     readFile(new URL("../README.md", import.meta.url), "utf8"),
     readFile(new URL("../public-record.json", import.meta.url), "utf8"),
