@@ -18,6 +18,7 @@ These statements describe R&D-stage work. They do **not** establish mass product
 - Company and brand relationship: https://bontoys.online/about
 - Official company and R&D facts: https://bontoys.online/press
 - Public R&D evidence record: https://bontoys.online/evidence/ai-voice-toy-demo
+- Versioned public R&D record: https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1
 - Official LinkedIn Page: https://www.linkedin.com/company/bontoys-by-benran
 - Official YouTube channel: https://www.youtube.com/@BontoysByBenran
 
@@ -27,6 +28,7 @@ These statements describe R&D-stage work. They do **not** establish mass product
 - About: https://web.archive.org/web/20260714191404/https://bontoys.online/about
 - Press facts: https://web.archive.org/web/20260714191428/https://bontoys.online/press
 - R&D evidence: https://web.archive.org/web/20260714191540/https://bontoys.online/evidence/ai-voice-toy-demo
+- Versioned public R&D record: https://web.archive.org/web/20260714192613/https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1
 
 ## Visual-evidence limitation
 
