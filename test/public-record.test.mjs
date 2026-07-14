@@ -17,5 +17,7 @@ test("publishes the verified official channels in the README and machine-readabl
   for (const channelUrl of expectedOfficialChannels) {
     assert.match(readme, new RegExp(channelUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
-  assert.deepEqual(record.sameAs, expectedOfficialChannels);
+  assert.equal(record.sameAs, undefined);
+  assert.equal(record.about["@id"], "https://bontoys.online/#brand");
+  assert.deepEqual(record.about.sameAs, expectedOfficialChannels);
 });
