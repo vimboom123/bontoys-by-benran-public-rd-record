@@ -18,6 +18,7 @@ These statements describe R&D-stage work. They do **not** establish mass product
 - Company and brand relationship: https://bontoys.online/about
 - Official company and R&D facts: https://bontoys.online/press
 - Public R&D evidence record: https://bontoys.online/evidence/ai-voice-toy-demo
+- Official LinkedIn Page: https://www.linkedin.com/company/bontoys-by-benran
 - Official YouTube channel: https://www.youtube.com/@BontoysByBenran
 
 ## Independent timestamped copies
