@@ -7,6 +7,8 @@ const expectedOfficialChannels = [
   "https://www.youtube.com/@BontoysByBenran",
   "https://x.com/Bontoysbybenran",
   "https://www.crunchbase.com/organization/bontoys-by-benran",
+  "https://www.tiktok.com/@bontoysbybenran",
+  "https://www.instagram.com/bontoysonline/",
 ];
 const expectedLatestSnapshots = [
   "https://web.archive.org/web/20260714191345/https://bontoys.online/",
@@ -15,13 +17,14 @@ const expectedLatestSnapshots = [
   "https://web.archive.org/web/20260714191540/https://bontoys.online/evidence/ai-voice-toy-demo",
 ];
 const expectedVersionedRecord =
-  "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v4";
+  "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v5";
 const expectedVersionedRecordSnapshot =
   "https://web.archive.org/web/20260714192613/https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1";
 const expectedVoiceModuleGuide =
   "https://bontoys.online/guides/voice-modules-for-existing-toys";
+const expectedLlmsDirectory = "https://bontoys.online/llms.txt";
 
-test("publishes the verified official channels in the README and machine-readable record", async () => {
+test("publishes the approved official channels in the README and machine-readable record", async () => {
   const [readme, recordSource] = await Promise.all([
     readFile(new URL("../README.md", import.meta.url), "utf8"),
     readFile(new URL("../public-record.json", import.meta.url), "utf8"),
@@ -34,6 +37,23 @@ test("publishes the verified official channels in the README and machine-readabl
   assert.equal(record.sameAs, undefined);
   assert.equal(record.about["@id"], "https://bontoys.online/#brand");
   assert.deepEqual(record.about.sameAs, expectedOfficialChannels);
+  assert.match(readme, /Owner-confirmed official TikTok profile/);
+  assert.match(readme, /Owner-confirmed official Instagram profile/);
+  assert.match(readme, /does not assert that every platform exposes a reciprocal website backlink/i);
+});
+
+test("links the concise agent-readable facts directory", async () => {
+  const [readme, recordSource] = await Promise.all([
+    readFile(new URL("../README.md", import.meta.url), "utf8"),
+    readFile(new URL("../public-record.json", import.meta.url), "utf8"),
+  ]);
+  const record = JSON.parse(recordSource);
+
+  assert.match(
+    readme,
+    new RegExp(expectedLlmsDirectory.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+  );
+  assert.deepEqual(record.citation, [expectedLlmsDirectory]);
 });
 
 test("separates Bontoys by Benran from legacy and similarly named toy brands", async () => {

@@ -17,7 +17,9 @@
       "https://www.linkedin.com/company/bontoys-by-benran",
       "https://www.youtube.com/@BontoysByBenran",
       "https://x.com/Bontoysbybenran",
-      "https://www.crunchbase.com/organization/bontoys-by-benran"
+      "https://www.crunchbase.com/organization/bontoys-by-benran",
+      "https://www.tiktok.com/@bontoysbybenran",
+      "https://www.instagram.com/bontoysonline/"
     ]
   },
   "publisher": {
@@ -26,6 +28,9 @@
     "alternateName": "本然智趣",
     "url": "https://benranzhiqu.cn/"
   },
+  "citation": [
+    "https://bontoys.online/llms.txt"
+  ],
   "isBasedOn": [
     "https://bontoys.online/about",
     "https://bontoys.online/press",
