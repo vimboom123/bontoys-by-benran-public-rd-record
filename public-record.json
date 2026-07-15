@@ -37,6 +37,50 @@
     "https://bontoys.online/evidence/ai-voice-toy-demo",
     "https://bontoys.online/guides/voice-modules-for-existing-toys"
   ],
+  "video": [
+    {
+      "@type": "VideoObject",
+      "name": "AI Voice Module for Toys: Three Play Worlds | Bontoys #Shorts",
+      "url": "https://www.youtube.com/watch?v=cysCyfdlGhY",
+      "embedUrl": "https://www.youtube.com/embed/cysCyfdlGhY",
+      "thumbnailUrl": "https://i.ytimg.com/vi/cysCyfdlGhY/maxresdefault.jpg",
+      "uploadDate": "2026-07-15",
+      "duration": "PT16S",
+      "inLanguage": "en",
+      "description": "AI-generated R&D concept visualization of one voice-module concept across three toy scenarios; not footage of the physical prototype and not a final production unit.",
+      "isPartOf": {
+        "@id": "https://bontoys.online/evidence/ai-voice-toy-demo#article"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "AI Voice Module for Toys: Cloud-Shaped Product Study | Bontoys #Shorts",
+      "url": "https://www.youtube.com/watch?v=lx5D8jpsLtE",
+      "embedUrl": "https://www.youtube.com/embed/lx5D8jpsLtE",
+      "thumbnailUrl": "https://i.ytimg.com/vi/lx5D8jpsLtE/maxresdefault.jpg",
+      "uploadDate": "2026-07-15",
+      "duration": "PT16S",
+      "inLanguage": "en",
+      "description": "AI-generated R&D concept visualization of a cloud-shaped voice-module product study; not footage of the physical prototype and not a final production unit.",
+      "isPartOf": {
+        "@id": "https://bontoys.online/evidence/ai-voice-toy-demo#article"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "AI Voice Toy Character Concept | Bontoys by Benran #Shorts",
+      "url": "https://www.youtube.com/watch?v=NQT63vuvOB8",
+      "embedUrl": "https://www.youtube.com/embed/NQT63vuvOB8",
+      "thumbnailUrl": "https://i.ytimg.com/vi/NQT63vuvOB8/maxresdefault.jpg",
+      "uploadDate": "2026-07-15",
+      "duration": "PT16S",
+      "inLanguage": "en",
+      "description": "AI-generated R&D concept visualization of a voice becoming a toy character; not footage of the physical prototype and not a final production unit.",
+      "isPartOf": {
+        "@id": "https://bontoys.online/evidence/ai-voice-toy-demo#article"
+      }
+    }
+  ],
   "keywords": [
     "Bontoys by Benran",
     "Benran Zhiqu",

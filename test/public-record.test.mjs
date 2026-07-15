@@ -17,12 +17,26 @@ const expectedLatestSnapshots = [
   "https://web.archive.org/web/20260714191540/https://bontoys.online/evidence/ai-voice-toy-demo",
 ];
 const expectedVersionedRecord =
-  "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v5";
+  "https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v6";
 const expectedVersionedRecordSnapshot =
   "https://web.archive.org/web/20260714192613/https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v1";
 const expectedVoiceModuleGuide =
   "https://bontoys.online/guides/voice-modules-for-existing-toys";
 const expectedLlmsDirectory = "https://bontoys.online/llms.txt";
+const expectedPublicVideos = [
+  {
+    name: "AI Voice Module for Toys: Three Play Worlds | Bontoys #Shorts",
+    url: "https://www.youtube.com/watch?v=cysCyfdlGhY",
+  },
+  {
+    name: "AI Voice Module for Toys: Cloud-Shaped Product Study | Bontoys #Shorts",
+    url: "https://www.youtube.com/watch?v=lx5D8jpsLtE",
+  },
+  {
+    name: "AI Voice Toy Character Concept | Bontoys by Benran #Shorts",
+    url: "https://www.youtube.com/watch?v=NQT63vuvOB8",
+  },
+];
 
 test("publishes the approved official channels in the README and machine-readable record", async () => {
   const [readme, recordSource] = await Promise.all([
@@ -108,6 +122,38 @@ test("links the official voice-module guide with the current verified channel se
   );
   assert.ok(record.isBasedOn.includes(expectedVoiceModuleGuide));
   assert.deepEqual(record.about.sameAs, expectedOfficialChannels);
+});
+
+test("publishes the three public concept videos with exact platform facts and evidence limits", async () => {
+  const [readme, recordSource] = await Promise.all([
+    readFile(new URL("../README.md", import.meta.url), "utf8"),
+    readFile(new URL("../public-record.json", import.meta.url), "utf8"),
+  ]);
+  const record = JSON.parse(recordSource);
+
+  assert.equal(record.dateModified, "2026-07-15");
+  assert.equal(record.video.length, 3);
+  for (const expected of expectedPublicVideos) {
+    assert.match(
+      readme,
+      new RegExp(expected.url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+    );
+    const video = record.video.find((item) => item.url === expected.url);
+    assert.ok(video, `missing VideoObject for ${expected.url}`);
+    assert.equal(video["@type"], "VideoObject");
+    assert.equal(video.name, expected.name);
+    assert.equal(video.duration, "PT16S");
+    assert.equal(video.uploadDate, "2026-07-15");
+    assert.equal(video.inLanguage, "en");
+    assert.deepEqual(video.isPartOf, {
+      "@id": "https://bontoys.online/evidence/ai-voice-toy-demo#article",
+    });
+    assert.match(video.description, /AI-generated R&D concept visualization/i);
+    assert.match(video.description, /not footage of the physical prototype/i);
+    assert.match(video.description, /not a final production unit/i);
+  }
+  assert.match(readme, /AI-generated R&D concept visualizations/i);
+  assert.match(readme, /do not show the physical prototype or final production units/i);
 });
 
 test("publishes the exact Chinese company name and rejects the incorrect rendering", async () => {

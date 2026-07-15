@@ -20,7 +20,7 @@ These statements describe R&D-stage work. They do **not** establish mass product
 - Public R&D evidence record: https://bontoys.online/evidence/ai-voice-toy-demo
 - Engineering guide — voice modules for existing toys: https://bontoys.online/guides/voice-modules-for-existing-toys
 - Agent-readable facts directory: https://bontoys.online/llms.txt
-- Versioned public R&D record: https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v5
+- Versioned public R&D record: https://github.com/vimboom123/bontoys-by-benran-public-rd-record/releases/tag/public-rd-record-v6
 - Official LinkedIn Page: https://www.linkedin.com/company/bontoys-by-benran
 - Official YouTube channel: https://www.youtube.com/@BontoysByBenran
 - Verified X profile: https://x.com/Bontoysbybenran
@@ -29,6 +29,14 @@ These statements describe R&D-stage work. They do **not** establish mass product
 - Owner-confirmed official Instagram profile: https://www.instagram.com/bontoysonline/
 
 These are the official public profiles for Bontoys by Benran. Profile-link visibility varies by platform; inclusion does not assert that every platform exposes a reciprocal website backlink.
+
+## Public concept videos
+
+- AI Voice Module for Toys: Three Play Worlds | Bontoys #Shorts: https://www.youtube.com/watch?v=cysCyfdlGhY
+- AI Voice Module for Toys: Cloud-Shaped Product Study | Bontoys #Shorts: https://www.youtube.com/watch?v=lx5D8jpsLtE
+- AI Voice Toy Character Concept | Bontoys by Benran #Shorts: https://www.youtube.com/watch?v=NQT63vuvOB8
+
+These 16-second videos are AI-generated R&D concept visualizations. They do not show the physical prototype or final production units, and they do not establish manufacturing, availability, certification, customer deployment, or validated outcomes.
 
 ## Independent timestamped copies
 
